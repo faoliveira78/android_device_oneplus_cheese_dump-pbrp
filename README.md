@@ -1,6 +1,6 @@
-# android_device_oneplus_cheeseburger_dumpling
+# android_device_oneplus_cheese_dump
 
-Tree for building official TWRP for OnePlus 5/5T. (Decryption works on Android 12.x and 13 ROMs)
+Tree for building Unofficial PBRP for OnePlus 5/5T. (Decryption works on Android 12.x and 13 ROMs)
 
 | Basic                   | Spec Sheet                                                                                                                     |
 | -----------------------:|:------------------------------------------------------------------------------------------------------------------------------ |
@@ -25,24 +25,24 @@ Tree for building official TWRP for OnePlus 5/5T. (Decryption works on Android 1
 ## Kernel
 
 Kernel source: (prebuilt)
-https://github.com/faoliveira78/android_kernel_oneplus_msm8998
+https://github.com/roberto-sartori-gl/4.14-kernel-oneplus-prebuilt
 
 ## Compile
 
 First repo init the TWRP 12.1 tree:
 
 ```
-mkdir ~/android/twrp-12.1
-cd ~/android/twrp-12.1
-repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+mkdir ~/android/pbrp-12.1
+cd ~/android/pbrp-12.1
+repo init -u https://github.com/PitchBlackRecoveryProject/manifest_pb -b android-12.1
 ```
 
-Then add to a local manifest (if you don't have .repo/local_manifests then make that directory and make a blank file and name it something like twrp.xml):
+Then add to a local manifest (if you don't have .repo/local_manifests then make that directory and make a blank file and name it something like pbrp.xml):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
- <project name="TeamWin/android_device_oneplus_cheeseburger_dumpling" path="device/oneplus/cheeseburger_dumpling" remote="github" revision="android-12.1"/>
+ <project name="faoliveira78/android_device_oneplus_cheese_dump-pbrp" path="device/oneplus/cheeseburger_dumpling" remote="github" revision="android-12.1"/>
 </manifest>
 ```
 
@@ -57,6 +57,6 @@ Finally execute these:
 ```
 . build/envsetup.sh
 export LC_ALL=C
-lunch twrp_cheeseburger_dumpling-eng
-mka recoveryimage
+lunch omni_cheeseburger_dumpling-eng
+mka pbrp
 ```
