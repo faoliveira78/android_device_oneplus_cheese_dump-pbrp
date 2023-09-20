@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # qcom standard decryption
 PRODUCT_PACKAGES += \
@@ -34,8 +34,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hardware.gatekeeper=msm8998
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := cheeseburger_dumpling
-PRODUCT_NAME := twrp_cheeseburger_dumpling
+PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
+PRODUCT_NAME := omni_$(PRODUCT_RELEASE_NAME)
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := OnePlus A5010
 PRODUCT_MANUFACTURER := OnePlus
