@@ -127,13 +127,11 @@ TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)
 
 TARGET_RECOVERY_DEVICE_MODULES += \
 	libion \
-	libxml2 \
 	vendor.display.config@1.0 \
 	vendor.display.config@2.0
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
 	$(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-	$(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
 	$(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
 	$(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so
 
@@ -154,7 +152,7 @@ TW_INCLUDE_RESETPROP := true
 TW_USE_TOOLBOX := true
 TW_HAS_EDL_MODE := true
 TW_OVERRIDE_SYSTEM_PROPS := \
-    "ro.build.date.utc;ro.build.date;ro.build.fingerprint=ro.system.build.fingerprint"
+    "ro.build.fingerprint=ro.system.build.fingerprint"
 
 # PBRP Specific Build Flags
 PB_DISABLE_DEFAULT_TREBLE_COMP := true
