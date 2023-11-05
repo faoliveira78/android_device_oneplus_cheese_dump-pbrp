@@ -1,6 +1,6 @@
 # android_device_oneplus_cheese_dump
 
-Tree for building Unofficial PBRP for OnePlus 5/5T. (Decryption works on Android 12.x and 13 ROMs)
+Tree for building Unofficial PBRP for OnePlus 5/5T. (Decryption works on Android 12+ ROMs)
 
 | Basic                   | Spec Sheet                                                                                                                     |
 | -----------------------:|:------------------------------------------------------------------------------------------------------------------------------ |
