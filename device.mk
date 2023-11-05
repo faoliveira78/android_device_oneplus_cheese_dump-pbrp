@@ -29,6 +29,7 @@ PRODUCT_COPY_FILES += \
 	$(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/system/apex/com.android.runtime/bin/crash_dump32:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/crash_dump32 \
 	$(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/system/apex/com.android.runtime/bin/crash_dump64:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/crash_dump64
 
+ifeq ($(ONEPLUS_DYNAMIC), true)
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
@@ -36,7 +37,8 @@ PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 # fastbootd
 PRODUCT_PACKAGES += \
 	fastbootd
-	
+endif
+
 # qcom standard decryption
 PRODUCT_PACKAGES += \
 	qcom_decrypt \

@@ -52,6 +52,11 @@ Now you can sync your source:
 repo sync
 ```
 
+If you want to build a recovery with support for dynamic partitions, add the following:
+```
+export ONEPLUS_DYNAMIC="true"
+```
+
 Finally execute these:
 
 ```
