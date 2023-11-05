@@ -41,7 +41,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
-PRODUCT_ENFORCE_VINTF_MANIFEST:= true
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := false
